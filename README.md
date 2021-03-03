@@ -1,2 +1,2 @@
 # TP
- Programas referentes a disciplina de Técnicas de Programação
+ Programas em C++ referentes a disciplina de Técnicas de Programação
