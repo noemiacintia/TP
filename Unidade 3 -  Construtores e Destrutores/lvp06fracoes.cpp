@@ -142,8 +142,8 @@ int main()
     // definindo os objetos da classe Fracoes
     Fracao f1, f2, fr;
     cout << "Este programa realiza a multiplicação e divisão de acordo com a "
-        "opção que o usário inserir e dado os numeradores e denominadores"
-        "de duas frações" << endl << endl;
+         "opção que o usário inserir e dado os numeradores e denominadores"
+         "de duas frações" << endl << endl;
     // pedindo ao usuário os valores que precisamos
     cout << "Insira a opção desejada: " << endl
          << "1- Multiplicar" << endl << "2- Dividir" << endl;
@@ -153,9 +153,9 @@ int main()
     cin >> numerador2;
     cin >> denominador2;
     // caso o usuário digite 0 para os denominadores
-    if(denominador1==0 || denominador2==0)
+    while(denominador1==0 || denominador2==0)
     {
-        cout << "Denominadore(s)<0 tente inseri-los novamente "
+        cout << "Denominadore(s)<=0 tente inseri-los novamente "
              "(denominador1(espaço)denominador2): ";
         cin >> denominador1;
         cin >> denominador2;
@@ -164,25 +164,26 @@ int main()
     aos atributos da classe para cada objeto */
     f1.setFracao(numerador1, denominador1);
     f2.setFracao(numerador2, denominador2);
+    cout << fixed << setprecision(4);
     // verificando o valor que o usuário digitou em opcao
     if(opcao==1)
     {
         /* chamando o método multiplica pro objeto fr que passei como parâmetro
         os objetos f1 e f2 */
         fr.multiplica(f1, f2);
-        cout << "A multiplicação eh: " << endl;
+        cout << "A multiplicacao no formato racional: " << fr.getRacionalNum()
+             << "/" << fr.getRacionalDen() << endl
+             << "Em ponto flutuante: " << fr.getFlutuante();
     }
     else if(opcao==2)
     {
-         /* chamando o método divide pro objeto fr que passei como parâmetro
+        /* chamando o método divide pro objeto fr que passei como parâmetro
         os objetos f1 e f2 */
         fr.divide(f1, f2);
-        cout << "A divisão eh: " << endl;
+        cout << "A divisao no formato racional: " << fr.getRacionalNum()
+             << "/" << fr.getRacionalDen() << endl
+             << "Em ponto flutuante: " << fr.getFlutuante();
     }
     // chamando os métodos para exibir os valores como a questão pede
-    cout << fixed << setprecision(4);
-    cout << "Formato racional: " << fr.getRacionalNum()
-         << "/" << fr.getRacionalDen() << endl
-         << "Formato em ponto flutuante: " << fr.getFlutuante();
     return 0;
 }

@@ -67,9 +67,9 @@ public:
 Elevador::Elevador()
 {
     andarAtual = 0;
-	pessoasNoElevador = 0;
-	capacidadeDoElevador = 10;
-	totalDeAndares = 5;
+    pessoasNoElevador = 0;
+    capacidadeDoElevador = 10;
+    totalDeAndares = 5;
 }
 
 /* método do construtor com parâmetros para atribuir aos atributos
@@ -148,8 +148,10 @@ int main()
     // definindo os objetos da classe Elevador
     Elevador predio;
     cout << "Este programa simula um elevador em que o usuário "
-        "insere as opções e o programa retorna a situação do elevador."
-        << endl << endl;
+         "insere as opções e o programa retorna a situação do elevador."
+         << endl << endl;
+    cout << "O prédio possui 5 andares e a capacidade máxima "
+            "do elevador é de 10 pessoas." << endl << endl;
     // pedindo ao usuário os valores que precisamos
     cout << "Insira o número de acordo com o menu abaixo:" << endl
          << "1 - entra" << endl << "2 - sai" << endl << "3 - sobe"
