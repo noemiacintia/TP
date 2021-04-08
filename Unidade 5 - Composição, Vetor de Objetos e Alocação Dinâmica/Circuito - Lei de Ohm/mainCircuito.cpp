@@ -34,7 +34,7 @@ int main()
     // para traduzir os cout's pro português
     setlocale(LC_ALL, "Portuguese");
     // definindo um vetor como objeto classe
-    Circuito circuitos[6];
+    Circuito circuitos[5];
     // variáveis para guardar os valores que o usuário digitar
     float correnteI, resistenciaR;
     int i;
@@ -43,12 +43,12 @@ int main()
     cout << "Insira os valores da corrente e da resistencia "
     << "de cada circuito: ";
     // percorrendo todos os objetos, calculando e exibindo o que se pede
-    for(i=1; i<6; i++)
+    for(i=0; i<5; i++)
     {
         cin >> correnteI >> resistenciaR;
         circuitos[i].setResistencia(resistenciaR);
         circuitos[i].setCorrente(correnteI);
-        cout << endl << i << ": " << endl
+        cout << endl << i+1 << ": " << endl
              << "voltagem: " << circuitos[i].calculaVoltagem()
              << endl << "potência: " << circuitos[i].calculaPotencia();
     }
