@@ -1,7 +1,10 @@
 #ifndef CERVEJARIA_H
 #define CERVEJARIA_H
 
+#include <iostream>
 #include <string>
+#include <iomanip>
+
 
 using namespace std;
 //Criando a classe base "Cervejaria"
@@ -10,25 +13,24 @@ class Cervejaria{
         string nome, codigo;
         float preco;
 
-        //Mï¿½todos pï¿½blicos
+        //Métodos públicos
     public:
         //Construtor vazio
         Cervejaria( );
-        //Construtor com parï¿½metros
+        //Construtor com parâmetros
         Cervejaria(string, string, float);
         //Setando e retornando os nomes das cervejas
         void setNome(string);
         string getNome( )const;
-        //Setando e retornando os cï¿½digos das cervejas
+        //Setando e retornando os códigos das cervejas
         void setCodigo(string);
         string getCodigo( )const;
         //Setando e retornando os nomes das cervejas
         void setPreco(float);
         float getPreco( )const;
-        //Mï¿½todo para imprimir o menu principal
+        //Método para imprimir o menu principal
         void MenuPrincipal() const;
-        //Mï¿½todo para imprimir o nome, cï¿½digo e preï¿½o.
+        //Método para imprimir o nome, código e preço.
         void Imprime( );
-        void ImprimeData( );
 };
 #endif

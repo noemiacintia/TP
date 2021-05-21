@@ -5,6 +5,9 @@
 #include "Cervejaria.h"
 #include "CervejaLitro.h"
 #include "CervejaUnd.h"
+#include <fstream>
+#include <vector>
+#include <algorithm>
 
 // criando a classe Estoque que herda de Cervejaria
 class Estoque : public Cervejaria{

@@ -42,5 +42,4 @@ void CervejaUnd :: ImprimeUnidade( ){
     Cervejaria :: Imprime( );
     cout << "Quantidade existente no estoque: " << getQntUnidade( )<<" cervejas."<<endl;
     cout << "Prazo de validade: " << getPValidade( ) << endl;
-    Cervejaria :: ImprimeData( );
 }

@@ -1,6 +1,5 @@
 #include "CervejaLitro.h"
 
-
 // contrutor da classe CervejaLitro para inicializar os atributos
 CervejaLitro :: CervejaLitro( ){
     litro = 0;
@@ -40,9 +39,8 @@ string CervejaLitro :: getPValidade( ) const{
 }
 
 void CervejaLitro :: ImprimeLitro( ){
-    // chamando a funï¿½ï¿½o imprime de Cervejaria para imprimir os atributos de nome, cï¿½digo e preï¿½o
+    // chamando a função imprime de Cervejaria para imprimir os atributos de nome, código e preço
     Cervejaria :: Imprime( );
     cout<<"Litros existentes no estoque: "<<getQntLitro( )<<"L"<<endl;
     cout<<"Prazo de validade: "<<getPValidade( )<<endl;
-    Cervejaria :: ImprimeData( );
 }

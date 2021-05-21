@@ -45,19 +45,6 @@ void Cervejaria :: MenuPrincipal() const{
 //Para imprimir os dados presente na classe cervejaria
 void Cervejaria :: Imprime( ){
     cout<<"Nome: "<< getNome( ) << endl;
-    cout<<"Codigo: "<< getCodigo( ) << endl;
-    cout<<"Preco: R$"<< fixed << setprecision(2) << getPreco( ) << endl;
-}
-
-void Cervejaria :: ImprimeData( ){
-    time_t t;
-	struct tm * infoTempo;
-
-	time(&t);
-	infoTempo = localtime(&t);
-
-	cout << "A data de hoje: "
-	<< infoTempo -> tm_mday << "/"
-    << "0" << ++(infoTempo -> tm_mon) << "/"
-	<< 1900 + (infoTempo -> tm_year) << endl;
+    cout<<"Código: "<< getCodigo( ) << endl;
+    cout<<"Preço: R$"<< fixed << setprecision(2) << getPreco( ) << endl;
 }

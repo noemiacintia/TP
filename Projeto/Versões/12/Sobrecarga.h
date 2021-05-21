@@ -2,6 +2,8 @@
 
 // Sobrecarregando o operador de sa�da << para que possa gravar um objeto inteiro em um arquivo.
 
+//Não conseguimos sobrecarregar quantidade e prazo de validade
+//Estão na classe CervejaUnd e CervejaLitro ao inves de Cervejaria
 ofstream& operator << (ofstream& arquivo, Cervejaria& c)
 {
 	arquivo << c.getNome( ) << endl;
@@ -11,11 +13,13 @@ ofstream& operator << (ofstream& arquivo, Cervejaria& c)
 	return arquivo;
 }
 
+
 // Sobrecarregando o operador de entrada >> para que possa ler um objeto inteiro de um arquivo.
 ifstream& operator >> (ifstream& arquivo, Cervejaria& c)
 {
 	string nome, codigo;
 	float preco;
+	int quantidade;
 
 	getline(arquivo, nome);
 	c.setNome(nome);
@@ -26,3 +30,4 @@ ifstream& operator >> (ifstream& arquivo, Cervejaria& c)
 
 	return arquivo;
 }
+

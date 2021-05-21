@@ -11,7 +11,7 @@ class CervejaLitro : public Cervejaria{
         string pValidade;
 
     public:
-        // métodos públicos
+        // mÃ©todos pÃºblicos
         CervejaLitro( ); // construtor para inicilizar os atributos
         // construtor para atribuir os valores passados na main para os atributos
         CervejaLitro(string, string , float, float, float, string);
@@ -21,7 +21,6 @@ class CervejaLitro : public Cervejaria{
         float getQntLitro( ) const;
         void setPValidade(string);
         string getPValidade( ) const;
-        void CalculaEstoque( );
         void ImprimeLitro( );
 };
 #endif
