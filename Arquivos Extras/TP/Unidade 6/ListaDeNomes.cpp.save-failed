@@ -1,0 +1,56 @@
+/* ALUNA: NOÊMIA CÍNTIA SALES SANTOS DA SILVA
+   MATRÍCULA: 119210674
+   Unidade 6 - LVP 13 */
+
+#include "ListaDeNomes.h"
+
+ListaDeNomes::ListaDeNomes(int TamMax)
+{
+    this->TamMax=TamMax;
+    nomes[TamMax];
+}
+
+void ListaDeNomes::insereNomes(string nomes[], int TamMax)
+{
+    int i;
+    for(i=0; i<TamMax; i++)
+    {
+        this->nomes[i]=nomes[i];
+    }
+}
+
+void ListaDeNomes::ordenaNomes(string nomes[], int TamMax)
+{
+    string aux;
+    int i, j;
+    for(i=0; i<TamMax-1; i++)
+    {
+        // for para comparar os elementos
+        for(j=0; j<TamMax-1; j++)
+        {
+            // função da biblioteca string compare() para comparar os elementos
+            if((nomes[j].compare(nomes[j+1]) > 0))
+            {
+                // ordenando os objetos
+                aux=nomes[j];
+                nomes[j]=nomes[j+1];
+                nomes[j+1]=aux;
+            }
+        }
+    }
+}
+
+void ListaDeNomes::imprimeNomes(string nomes[], TamMax)
+{
+    int i;
+    cout << "Lista Ordenada:" << endl << endl;
+    for(i=0; i<TamMax; i++)
+    {
+        cout << nomes[i] << endl;
+    }
+}
+
+~ListaDeNomes()
+{
+    delete nomes[TamMax];
+}
